@@ -1,6 +1,6 @@
 .PHONY: all clean
-CC=gcc
-CPP=g++
+CC=clang
+CPP=clang++
 AR=ar
 RANLIB=ranlib
 CFLAGS= -g -Wall -Wno-unused-function
@@ -263,5 +263,5 @@ suffix_array_demo: $(SRCDIR)/suffix_array_demo.cpp
 	$(CPP) $(C11FLAGS) -o $@ $^ $(INCLUDEDIR) $(LIBS)
 
 clean:
-	rm -rf $(PROGRAMS) *.dSYM
+	rm -rf $(PROGRAMS) *.dSYM *.o
 
